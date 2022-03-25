@@ -1,0 +1,44 @@
+@use '../../../styles/variables.scss' as var;
+@use '../../../styles/molecules.scss';
+
+.search-field {
+
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 32px;
+    margin-right: 24px;
+  }
+
+  input {
+    display: block;
+    height: 56px;
+    width: calc(100% - 32px - 24px);
+    padding-bottom: 4px;
+
+    background-color: transparent;
+    color: var.$pure-white;
+    font-size: 24px;
+    line-height: 30.24px;
+    font-weight: 300;
+    font-style: normal;
+    caret-color: var.$red;
+
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .15s ease-in;
+
+    &:focus-visible,
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+      border-bottom: 1px solid var.$pure-white;
+    }
+
+    &::placeholder {
+      color: var.$greyish-blue;
+    }
+  }
+}
