@@ -4,7 +4,7 @@ export const Breakpoints = {
   desktop: 1440
 }
 
-export interface IData {
+export interface IMedia {
   title: string;
   thumbnail: {
     trending?: {
@@ -26,7 +26,7 @@ export interface IData {
 
 export type Category = 'Movie' | 'TV Series';
 
-export const data: IData[] = [
+export const data: IMedia[] = [
   {
     "title": "Beyond Earth",
     "thumbnail": {

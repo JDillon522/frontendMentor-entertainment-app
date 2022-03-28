@@ -43,7 +43,8 @@
   height: 100%;
   width: 75px;
   position: absolute;
-  background-color: var.$dark-blue;
+  // background-color: var.$semi-dark-blue;
+  background-color: transparent;
   opacity: .0;
   transition: opacity .15s ease-in;
   z-index: 0;
@@ -72,10 +73,11 @@
 
 .wrapper {
   position: relative;
+  margin-bottom: 3.4rem;
 
   &:hover {
     .overlay {
-      opacity: .75;
+      opacity: 1;
       z-index: 10;
     }
   }

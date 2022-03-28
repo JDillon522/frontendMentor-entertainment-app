@@ -1,1 +1,14 @@
-<p>bookmarked works!</p>
+<app-search-field [searchSubject]="searchString" placeholder="Search for bookmarked movies and TV Shows">
+</app-search-field>
+
+<section>
+  <h1 *ngIf="!(searchString | async)">Bookmarked Movies</h1>
+  <h1 *ngIf="(searchString | async)">Found {{(filteredMovies | async)?.length}} Movies for '{{searchString | async}}'</h1>
+  <app-media-container [media]="filteredMovies"></app-media-container>
+</section>
+
+<section>
+  <h1 *ngIf="!(searchString | async)">Bookmarked TV Series</h1>
+  <h1 *ngIf="(searchString | async)">Found {{(filteredTVSeries | async)?.length}} TV Series for '{{searchString | async}}'</h1>
+  <app-media-container [media]="filteredTVSeries"></app-media-container>
+</section>

@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { IData } from '../../services/data';
+import { IMedia } from '../../services/data';
 
 @Component({
   selector: 'app-media-container',
@@ -15,7 +15,7 @@ export class MediaContainerComponent implements OnInit {
   private mediaCards!: QueryList<ElementRef>;
 
   @Input()
-  public media!: Observable<IData[]>;
+  public media!: Observable<IMedia[]>;
 
   @Input()
   public trendingContainer = false;
@@ -93,7 +93,7 @@ export class MediaContainerComponent implements OnInit {
     }
 
     // Scroll into view
-    this.mediaCards.get(scrollToIndex)?.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.mediaCards.get(scrollToIndex)?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
 

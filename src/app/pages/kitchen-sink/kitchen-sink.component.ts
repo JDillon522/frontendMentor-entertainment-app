@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { map, take } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
-import { IData } from '../../shared/services/data';
+import { IMedia } from '../../shared/services/data';
 import { DataService } from '../../shared/services/data.service';
 
 @Component({
@@ -12,9 +12,9 @@ import { DataService } from '../../shared/services/data.service';
 })
 export class KitchenSinkComponent implements OnInit {
 
-  public trending: Observable<IData[]> = new Observable<IData[]>();
-  public bookMarked: Observable<IData[]> = new Observable<IData[]>();
-  public movies: Observable<IData[]> = new Observable<IData[]>();
+  public trending: Observable<IMedia[]> = new Observable<IMedia[]>();
+  public bookMarked: Observable<IMedia[]> = new Observable<IMedia[]>();
+  public movies: Observable<IMedia[]> = new Observable<IMedia[]>();
 
   public dummyForm: FormGroup = new FormGroup({
     basic: new FormControl(),
@@ -31,9 +31,8 @@ export class KitchenSinkComponent implements OnInit {
   ngOnInit(): void {
     this.dummyForm.get('error')?.markAsDirty();
 
-    this.trending = this.dataService.trending;
-    this.bookMarked = this.dataService.bookmarked.pipe(map(media => media.slice(0, 3)));
-    this.movies = this.dataService.movies.pipe(map(media => media.slice(0, 5)));
+    this.trending = this.dataService.trending$;
+    this.movies = this.dataService.movies$.pipe(map(media => media.slice(0, 5)));
 
   }
 

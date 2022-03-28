@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Breakpoints, IData } from '../../../services/data';
+import { Breakpoints, IMedia } from '../../../services/data';
+import { DataService } from '../../../services/data.service';
 
 @Component({
   selector: 'app-media-card',
@@ -8,19 +9,23 @@ import { Breakpoints, IData } from '../../../services/data';
 })
 export class MediaCardComponent implements OnInit {
   @Input()
-  public data!: IData;
+  public data!: IMedia;
 
   @Input()
   public trendingCard = false;
 
   public breakpoints = Breakpoints;
 
-  constructor() { }
+  constructor(
+    private dataService: DataService
+  ) { }
 
   ngOnInit(): void {
   }
 
   public toggleBookmark(): void {
     this.data.isBookmarked = !this.data.isBookmarked;
+
+    this.dataService.updateBookmark(this.data);
   }
 }

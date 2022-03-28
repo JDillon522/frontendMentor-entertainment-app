@@ -25,6 +25,7 @@ app-root {
 
 h1 {
   @include var.heading-large;
+  margin-bottom: 2rem;
 }
 
 h2 {
