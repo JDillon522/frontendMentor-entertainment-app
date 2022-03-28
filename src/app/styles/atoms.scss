@@ -19,6 +19,10 @@ body {
   // height: calc(100% - var.$base-margin * 2);
 }
 
+app-root {
+  width: 100%;
+}
+
 h1 {
   @include var.heading-large;
 }
@@ -62,6 +66,7 @@ button {
   border: none;
   border-radius: 6px;
   transition: all .15s ease-in;
+  cursor: pointer;
 
   &:hover {
     color: var.$semi-dark-blue;

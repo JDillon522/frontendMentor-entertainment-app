@@ -4,6 +4,7 @@ import { FormFieldModule } from '../../shared/components/form-field/form-field.m
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { KitchenSinkComponent } from './kitchen-sink.component';
 import { SearchFieldModule } from '../../shared/components/search-field/search-field.module';
+import { MediaContainerModule } from '../../shared/components/media-container/media-container.module';
 
 
 
@@ -16,7 +17,8 @@ import { SearchFieldModule } from '../../shared/components/search-field/search-f
     FormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    SearchFieldModule
+    SearchFieldModule,
+    MediaContainerModule
   ],
   exports: [
     KitchenSinkComponent

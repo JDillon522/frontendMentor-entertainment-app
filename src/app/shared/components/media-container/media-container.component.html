@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="overlay left" *ngIf="trendingContainer && showLeftNextButton" (click)="scrollContainer('left')">
+    <mat-icon>chevron_left</mat-icon>
+  </div>
+  <section [ngClass]="containerClass" (scroll)="trendingContainer && onScroll($event)" #container>
+    <app-media-card
+      *ngFor="let item of media | async"
+      [data]="item"
+      [trendingCard]="trendingContainer"
+      #mediaCard></app-media-card>
+  </section>
+  <div class="overlay right" *ngIf="trendingContainer && showRightNextButton" (click)="scrollContainer('right')">
+    <mat-icon>chevron_right</mat-icon>
+  </div>
+</div>

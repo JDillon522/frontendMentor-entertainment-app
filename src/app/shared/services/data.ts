@@ -1,4 +1,32 @@
-[
+export const Breakpoints = {
+  mobile: 375,
+  tablet: 768,
+  desktop: 1440
+}
+
+export interface IData {
+  title: string;
+  thumbnail: {
+    trending?: {
+      small: string;
+      large: string;
+    },
+    regular: {
+      small: string;
+      medium: string;
+      large: string;
+    }
+  },
+  year: number;
+  category: Category;
+  rating: string;
+  isBookmarked: boolean;
+  isTrending: boolean;
+}
+
+export type Category = 'Movie' | 'TV Series';
+
+export const data: IData[] = [
   {
     "title": "Beyond Earth",
     "thumbnail": {

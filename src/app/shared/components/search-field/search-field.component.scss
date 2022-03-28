@@ -9,6 +9,11 @@
   img {
     width: 32px;
     margin-right: 24px;
+
+    @media screen and (max-width: var.$tablet-min-width) {
+      width: 24px;
+      margin-right: 16px;
+    }
   }
 
   input {
@@ -39,6 +44,12 @@
 
     &::placeholder {
       color: var.$greyish-blue;
+    }
+
+    @media screen and (max-width: var.$tablet-min-width) {
+      font-size: 16px;
+      line-height: 20px;
+      height: 24px;
     }
   }
 }

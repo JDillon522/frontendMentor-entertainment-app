@@ -1,12 +1,15 @@
 // colors
-$red: hsl(0, 97%, 63%);
-$pure-white: hsl(0, 0%, 100%);
-$dark-blue: hsl(223, 36%, 14%);
-$greyish-blue: hsl(223, 23%, 46%);
-$semi-dark-blue: hsl(223, 40%, 9%);
+$red: #fc4747;
+$pure-white: #FFFFFF;
+$dark-blue: #10141E;
+$greyish-blue: #5A698F;
+$semi-dark-blue: #161D2F;
 
 // Layout
 $base-margin: 8px;
+$tablet-min-width: 400px;
+$tablet-primary-width: 1000px;
+$desktop-min-width: 1440px;
 
 // Text Styles
 $font-family: "Outfit", sans-serif;

@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MediaCardComponent } from './media-card.component';
+import { NavComponent } from './nav.component';
 
 
 
 @NgModule({
   declarations: [
-    MediaCardComponent
+    NavComponent
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NavComponent
   ]
 })
-export class MediaCardModule { }
+export class NavModule { }
