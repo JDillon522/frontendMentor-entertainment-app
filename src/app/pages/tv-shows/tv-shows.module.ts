@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavComponent } from './nav.component';
+import { TvShowsComponent } from './tv-shows.component';
 import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [
-    NavComponent
+    TvShowsComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
-  ],
-  exports: [
-    NavComponent
+    RouterModule.forChild([
+      {
+        component: TvShowsComponent,
+        path: ''
+      }
+    ])
   ]
 })
-export class NavModule { }
+export class TvShowsModule { }

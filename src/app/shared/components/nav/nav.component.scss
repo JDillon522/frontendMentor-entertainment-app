@@ -21,6 +21,7 @@ $nav-width: 96px;
     a {
       margin-bottom: 40px;
 
+      &.active:not(.logo):not(.avatar),
       &:not(.logo):not(.avatar):hover {
         img {
           filter: brightness(100);
