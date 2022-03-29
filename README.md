@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/JDillon522/frontendMentor-entertainment-app)
-- Live Site URL: [GitHub Pages](https://github.com/JDillon522/frontendMentor-entertainment-app/deployments/activity_log?environment=github-pages)
+- Live Site URL: [GitHub Pages](https://jdillon522.github.io/frontendMentor-entertainment-app/)
 
 ## My process
 
