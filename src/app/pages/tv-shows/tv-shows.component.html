@@ -1,8 +1,0 @@
-<app-search-field [searchSubject]="searchString" placeholder="Search for TV series">
-</app-search-field>
-
-<section class="recommended">
-  <h1 *ngIf="!(searchString | async)">TV Series</h1>
-  <h1 *ngIf="(searchString | async)">Found {{(filteredTVSeries | async)?.length}} TV Series for '{{searchString | async}}'</h1>
-  <app-media-container [media]="filteredTVSeries"></app-media-container>
-</section>

@@ -1,8 +1,0 @@
-<app-search-field [searchSubject]="searchString" placeholder="Search for movies">
-</app-search-field>
-
-<section class="recommended">
-  <h1 *ngIf="!(searchString | async)">Movies</h1>
-  <h1 *ngIf="(searchString | async)">Found {{(filteredMovies | async)?.length}} Movies for '{{searchString | async}}'</h1>
-  <app-media-container [media]="filteredMovies"></app-media-container>
-</section>
