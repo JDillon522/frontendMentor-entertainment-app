@@ -7,7 +7,7 @@ import { IMedia } from '../../services/data';
   selector: 'app-search-field',
   template: `
     <div class="search-field">
-      <img src="/assets/icon-search.svg" alt="">
+      <img src="./assets/icon-search.svg" alt="">
       <input type="text" [formControl]="search" [placeholder]="placeholder">
     </div>
   `,
