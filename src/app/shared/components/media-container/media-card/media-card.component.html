@@ -12,16 +12,16 @@
   </picture>
 
   <div class="bookmark" (click)="toggleBookmark()">
-    <img *ngIf="!data.isBookmarked" src="/assets/icon-bookmark-empty.svg" alt="Bookmark" title="Add Bookmark">
-    <img *ngIf="data.isBookmarked" src="/assets/icon-bookmark-full.svg" alt="Bookmark" title="Remove Bookmark">
+    <img *ngIf="!data.isBookmarked" src="./assets/icon-bookmark-empty.svg" alt="Bookmark" title="Add Bookmark">
+    <img *ngIf="data.isBookmarked" src="./assets/icon-bookmark-full.svg" alt="Bookmark" title="Remove Bookmark">
   </div>
 
   <p [ngClass]="{'small': !trendingCard}">
     <span class="year">{{data.year}}</span>
     <span class="bullet"></span>
     <span class="category">
-      <img class="icon" *ngIf="data.category === 'Movie'" src="/assets/icon-category-movie.svg">
-      <img class="icon" *ngIf="data.category === 'TV Series'" src="/assets/icon-category-tv.svg">
+      <img class="icon" *ngIf="data.category === 'Movie'" src="./assets/icon-category-movie.svg">
+      <img class="icon" *ngIf="data.category === 'TV Series'" src="./assets/icon-category-tv.svg">
       {{data.category}}
     </span>
     <span class="bullet"></span>
