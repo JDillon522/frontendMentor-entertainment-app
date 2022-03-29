@@ -107,7 +107,7 @@ Once the "Kitchen Sink" was built out it was a relatively trivial process to int
 
 ### What I learned
 
-Reactive programing is/can be very clean. However, Rxjs is not an intuitive library. My goal was not not have any subscriptions in the entire app and to simply pipe events and let `async` pipes do the rendering. This proved more difficult than I thought.
+Reactive programing is/can be very clean. However, Rxjs is not an intuitive library. My goal was not to have any subscriptions in the entire app and to simply pipe events and let `async` pipes do the rendering. This proved more difficult than I thought.
 
 The `search-field` component acts as a simple filter for whatever stream of data is on the page. My intent was that the search field would have a simple interface for filtering a stream of media data without a ton of repeated boilerplate code - and without any subscriptions.
 
