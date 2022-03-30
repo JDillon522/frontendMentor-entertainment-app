@@ -8,36 +8,32 @@ import { IMedia } from '../../services/data';
   template: `
     <div class="search-field">
       <img src="./assets/icon-search.svg" alt="">
-      <input type="text" [formControl]="search" [placeholder]="placeholder">
+      <input
+        type="text"
+        name="search"
+        [(ngModel)]="search"
+        (ngModelChange)="updateSearch($event)"
+        [placeholder]="placeholder">
     </div>
   `,
   encapsulation: ViewEncapsulation.None,
   styleUrls: ['./search-field.component.scss']
 })
-export class SearchFieldComponent implements OnInit, OnDestroy {
-  public search: FormControl = new FormControl();
-  private searchSub!: Subscription;
+export class SearchFieldComponent {
 
   @Input()
-  public searchSubject!: Subject<string>;
+  public search: string = '';
 
   @Input()
   public placeholder: string = 'Search for movies or TV series';
 
-  constructor() {
+  @Output()
+  public searchChanged = new EventEmitter<string>();
 
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.searchSub = this.search.valueChanges.pipe(
-      debounceTime(250)
-    ).subscribe(change => {
-      this.searchSubject?.next(change)
-    });
-  }
-
-  ngOnDestroy(): void {
-    this.searchSub.unsubscribe();
+  public updateSearch(term: string) {
+    this.searchChanged.next(term);
   }
 }
 

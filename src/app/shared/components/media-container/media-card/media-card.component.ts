@@ -24,8 +24,6 @@ export class MediaCardComponent implements OnInit {
   }
 
   public toggleBookmark(): void {
-    this.data.isBookmarked = !this.data.isBookmarked;
-
-    this.dataService.updateBookmark(this.data);
+    this.dataService.updateBookmark(this.data.title, !this.data.isBookmarked);
   }
 }
