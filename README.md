@@ -166,3 +166,6 @@ public filterMediaStream = (searchString: Observable<string>, mediaStream: Obser
     );
 }
 ```
+
+### Update On Reactive Programing
+I posted a [request for feedback on Reddit](https://www.reddit.com/r/Angular2/comments/tr6vqj/pure_reactive_programming_attempt_feedback_request/) (gasp! I know, I'm brave). I received a lot of great feedback, especially from [@dmitryef](https://www.reddit.com/r/Angular2/comments/tr6vqj/comment/i2nf4rd/?utm_source=share&utm_medium=web2x&context=3) who took the time to update things to be purely reactive. The changes were pretty drastic but mostly related to how I was instantiating variables, tracking changes, and updating.
